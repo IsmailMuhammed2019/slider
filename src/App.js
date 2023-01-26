@@ -5,6 +5,18 @@ import data from './data'
 function App() {
   const [people, setPeople] = useState(data)
   const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    if(index < 0) {
+      const lastIndex = people.length - 1;
+      setIndex(lastIndex)
+    }
+    if(index > lastIndex){
+      setIndex(0)
+    }
+  },[index, people])
+
+  
   return (
     <div className='section'>
       <div className='title'>
@@ -16,7 +28,7 @@ function App() {
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person
           let position = 'nextSlide'
-          if(personIndex === position) {
+          if(personIndex === index) {
             position = 'activeSlide'
           }
           if(personIndex === index - 1 || (index === 0 && personIndex === people.lenght - 1)){
