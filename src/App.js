@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="section">
       <div className="title">
-        
+        <h2><span>/</span> Reviews</h2>
+
       </div>
     </div>
 
