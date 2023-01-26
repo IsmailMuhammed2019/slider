@@ -7,9 +7,9 @@ function App() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+       const lastIndex = people.length - 1
     if(index < 0) {
-      const lastIndex = people.length - 1;
-      setIndex(lastIndex)
+         setIndex(lastIndex)
     }
     if(index > lastIndex){
       setIndex(0)
@@ -17,7 +17,7 @@ function App() {
   },[index, people])
 
   useEffect(() => {
-    let slider = setInterval(setIndex(index + 1),3000)
+    let slider = setInterval(() => {setIndex(index + 1)},3000)
   }, [index])
 
 
