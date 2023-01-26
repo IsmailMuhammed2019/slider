@@ -10,9 +10,14 @@ function App() {
       <div className="title">
         <h2><span>/</span> Reviews</h2>
       </div>
-      <div className="section">
+      <div className="section-center">
         {people.map((person, personIndex) => {
           const {id, image, name, title, quote} = person
+          return (
+            <article key={id}>
+              <img src={image} alt={name} className='person-img'/>
+            </article>
+          )
         })}
       </div>
     </div>
