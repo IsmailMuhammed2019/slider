@@ -16,6 +16,8 @@ function App() {
           return (
             <article key={id}>
               <img src={image} alt={name} className='person-img'/>
+              <h4>{name}</h4>
+              <p className="title">{title}</p>
             </article>
           )
         })}
