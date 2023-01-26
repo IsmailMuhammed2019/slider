@@ -22,6 +22,7 @@ function App() {
             </article>
           )
         })}
+          <FaQuoteRight className='icon' />
       </div>
     </div>
 
