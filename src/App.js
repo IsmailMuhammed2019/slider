@@ -10,6 +10,11 @@ function App() {
       <div className="title">
         <h2><span>/</span> Reviews</h2>
       </div>
+      <div className="section">
+        {people.map((person, personIndex) => {
+          const {id, image, name, title, quote} = person
+        })}
+      </div>
     </div>
 
   )
